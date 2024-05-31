@@ -1,0 +1,171 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-height: 40vh; /* Limiting banner height to 35% of viewport height */
+}
+
+.logo {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1; /* Ensure logo is above the banner image */
+}
+
+.logo img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+    z-index: 1; /* Ensure text is above the banner image */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.service-content {
+    display: flex;
+    justify-content: space-between; /* Ensure items are spaced apart */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service-text {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    text-align: justify; /* Align text to justify */
+}
+
+.service-image {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+}
+
+.service-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Style for the FAQs section */
+#faqs {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Style for the contact form */
+#contact {
+    margin-top: 20px;
+}
+
+#contact form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+
+/* For smaller screens, stack the elements vertically */
+@media screen and (max-width: 768px) {
+    .service-content {
+        flex-direction: column;
+    }
+
+    .service-image,
+    .service-text {
+        width: 100%; /* Take full width on smaller screens */
+        text-align: center; /* Center-align text */
+        padding: 10px 0; /* Reduce padding */
+    }
+}
